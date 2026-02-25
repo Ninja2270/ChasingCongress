@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using TMPro;
 
 ////TODO: localization support
 
@@ -236,6 +237,7 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
         /// </summary>
         public void StartInteractiveRebind()
         {
+            m_Action.action.Disable();
             if (!ResolveActionAndBinding(out var action, out var bindingIndex))
                 return;
 
@@ -254,6 +256,7 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
 
         private void PerformInteractiveRebind(InputAction action, int bindingIndex, bool allCompositeParts = false)
         {
+            action.Disable();
             m_RebindOperation?.Cancel(); // Will null out m_RebindOperation.
 
             void CleanUp()
@@ -263,6 +266,8 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
 
                 action.actionMap.Enable();
                 m_UIInputActionMap?.Enable();
+                m_Action.action.Enable();
+                SaveActionBinding();
             }
 
             // An "InvalidOperationException: Cannot rebind action x while it is enabled" will
@@ -454,6 +459,26 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
             {
                 var action = m_Action?.action;
                 m_ActionLabel.text = action != null ? action.name : string.Empty;
+            }
+        }
+
+        private void Start()
+        {
+            LoadActionBinding();
+        }
+
+        private void SaveActionBinding()
+        {
+            var currBindings = actionReference.action.actionMap.SaveBindingOverridesAsJson();
+            PlayerPrefs.SetString(m_Action.action.name + bindingId, currBindings);
+        }
+
+        private void LoadActionBinding()
+        {
+            var savedBindings = PlayerPrefs.GetString(m_Action.action.name + bindingId);
+            if (!string.IsNullOrEmpty(savedBindings))
+            {
+                actionReference.action.actionMap.LoadBindingOverridesFromJson(savedBindings);
             }
         }
 

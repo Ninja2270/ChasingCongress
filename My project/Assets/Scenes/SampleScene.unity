@@ -5664,7 +5664,6 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 694699294}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5675,17 +5674,6 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
-=======
-  m_GameObject: {fileID: 667580905}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 725240339}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> parent of 91ee577 (Keybinding Finished)
 --- !u!1 &725240335
 GameObject:
   m_ObjectHideFlags: 0
@@ -19998,10 +19986,7 @@ SceneRoots:
   - {fileID: 1066565229}
   - {fileID: 1225942231}
   - {fileID: 2043216987}
-<<<<<<< HEAD
   - {fileID: 953697771}
   - {fileID: 629135476}
   - {fileID: 942987722}
   - {fileID: 1681668155}
-=======
->>>>>>> parent of 91ee577 (Keybinding Finished)

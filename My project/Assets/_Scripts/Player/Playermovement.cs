@@ -1,5 +1,3 @@
-using Mono.Cecil;
-using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.InputSystem;
 public class Playermovement : MonoBehaviour
@@ -7,12 +5,9 @@ public class Playermovement : MonoBehaviour
     private float movementSpeed = 5f;
 
     private Rigidbody2D rb;
-
-    private Vector2 _moveDirection;
-
-    public InputActionReference move;
-    public InputActionReference interact; //For dialogue and other options
-
+   
+    float horizontalMovement;
+    float verticalMovement;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,22 +18,14 @@ public class Playermovement : MonoBehaviour
     [System.Obsolete]
     void Update()
     {
-        _moveDirection = move.action.ReadValue<Vector2>();
+       rb.velocity = new Vector2(horizontalMovement * movementSpeed,rb.velocity.y);
+        rb.velocity = new Vector2(verticalMovement * movementSpeed, rb.velocity.x);
 
     }
 
-    public void FixedUpdate()
+    public void Move(InputAction.CallbackContext context)
     {
-        rb.linearVelocity = new Vector2(_moveDirection.x * movementSpeed, _moveDirection.y * movementSpeed);
-    }
-
-    private void OnEnable()
-    {
-        interact.action.started += Interaction;
-    }
-
-    private void Interaction(InputAction.CallbackContext obj)
-    {
-        Debug.Log("Interaction / Action button has been pressed");
+        horizontalMovement = context.ReadValue<Vector2>().y;
+        verticalMovement = context.ReadValue<Vector2>().x;
     }
 }

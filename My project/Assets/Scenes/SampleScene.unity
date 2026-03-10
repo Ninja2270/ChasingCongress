@@ -4847,7 +4847,7 @@ NavMeshAgent:
   m_Speed: 8
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 100
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -5005,7 +5005,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 0.0001
 --- !u!1 &640978445
 GameObject:
   m_ObjectHideFlags: 0
@@ -15573,8 +15573,8 @@ Transform:
   m_GameObject: {fileID: 1800294893}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071062, w: 0.7071074}
-  m_LocalPosition: {x: 69.45008, y: 1.898078, z: 0}
-  m_LocalScale: {x: 0.041666668, y: 30, z: 0.5}
+  m_LocalPosition: {x: 69.45, y: 1.89946, z: 0}
+  m_LocalScale: {x: 0.063255936, y: 30, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 460919417}
@@ -18894,7 +18894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7441173308151745633, guid: 7b8eb922d7fee914aa2ecd9bc43914c0, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

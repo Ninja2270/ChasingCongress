@@ -5,9 +5,12 @@ public class Playermovement : MonoBehaviour
     private float movementSpeed = 5f;
 
     private Rigidbody2D rb;
-   
-    float horizontalMovement;
-    float verticalMovement;
+
+    private Vector2 _moveDirection;
+
+    public InputActionReference move;
+    public InputActionReference interact; //For dialogue and other options
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,14 +21,22 @@ public class Playermovement : MonoBehaviour
     [System.Obsolete]
     void Update()
     {
-       rb.velocity = new Vector2(horizontalMovement * movementSpeed,rb.velocity.y);
-        rb.velocity = new Vector2(verticalMovement * movementSpeed, rb.velocity.x);
+        _moveDirection = move.action.ReadValue<Vector2>();
 
     }
 
-    public void Move(InputAction.CallbackContext context)
+    public void FixedUpdate()
     {
-        horizontalMovement = context.ReadValue<Vector2>().y;
-        verticalMovement = context.ReadValue<Vector2>().x;
+        rb.linearVelocity = new Vector2(_moveDirection.x * movementSpeed, _moveDirection.y * movementSpeed);
+    }
+
+    private void OnEnable()
+    {
+        interact.action.started += Interaction;
+    }
+
+    private void Interaction(InputAction.CallbackContext obj)
+    {
+        Debug.Log("Interaction / Action button has been pressed");
     }
 }

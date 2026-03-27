@@ -19908,6 +19908,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 392211534007076340, guid: 7cb0bb2d0859fe14c8b09237acfee90e, type: 3}
+      propertyPath: move
+      value: 
+      objectReference: {fileID: 5314822490843573187, guid: a5bf74323aa23a14eb7f503efb9eb30b, type: 3}
+    - target: {fileID: 392211534007076340, guid: 7cb0bb2d0859fe14c8b09237acfee90e, type: 3}
+      propertyPath: interact
+      value: 
+      objectReference: {fileID: 6779058268209877694, guid: a5bf74323aa23a14eb7f503efb9eb30b, type: 3}
     - target: {fileID: 1725619908667766243, guid: 7cb0bb2d0859fe14c8b09237acfee90e, type: 3}
       propertyPath: layerMask.m_Bits
       value: 4294967295

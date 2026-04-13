@@ -13,11 +13,6 @@ public class SceneBehaviour : MonoBehaviour
     bool showSettings;
     bool showKeybinds;
 
-    public void PlayGame()
-    {
-        SceneManager.LoadScene(1);
-    }
-
     public void showSettingsMenu()
     {
         _settingsMenu.gameObject.SetActive(true);

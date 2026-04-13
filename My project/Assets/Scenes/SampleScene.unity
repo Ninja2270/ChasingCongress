@@ -19925,8 +19925,40 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 519420031}
     - target: {fileID: 3610087055339846245, guid: 7cb0bb2d0859fe14c8b09237acfee90e, type: 3}
+      propertyPath: m_Actions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: a5bf74323aa23a14eb7f503efb9eb30b, type: 3}
+    - target: {fileID: 3610087055339846245, guid: 7cb0bb2d0859fe14c8b09237acfee90e, type: 3}
       propertyPath: m_UIInputModule
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610087055339846245, guid: 7cb0bb2d0859fe14c8b09237acfee90e, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: GameplayControls
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610087055339846245, guid: 7cb0bb2d0859fe14c8b09237acfee90e, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610087055339846245, guid: 7cb0bb2d0859fe14c8b09237acfee90e, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionId
+      value: 04519475-d130-4e5e-85d9-9e6d0bfd7da5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610087055339846245, guid: 7cb0bb2d0859fe14c8b09237acfee90e, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionId
+      value: b0a2e92e-bc33-45f8-801e-f290c299cca7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610087055339846245, guid: 7cb0bb2d0859fe14c8b09237acfee90e, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionName
+      value: 'GameplayControls/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610087055339846245, guid: 7cb0bb2d0859fe14c8b09237acfee90e, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionName
+      value: 'GameplayControls/Interact[/Keyboard/space]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610087055339846245, guid: 7cb0bb2d0859fe14c8b09237acfee90e, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6340381341838372815, guid: 7cb0bb2d0859fe14c8b09237acfee90e, type: 3}
       propertyPath: m_LocalPosition.x

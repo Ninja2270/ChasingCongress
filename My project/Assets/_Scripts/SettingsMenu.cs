@@ -28,22 +28,19 @@ public class SettingsMenu : MonoBehaviour
 
     public void SetMasterLvl(float masterlvl)
     {
-        masterMixer.SetFloat("MasterVol", Mathf.Log10(masterlvl) * 20);
+        masterMixer.SetFloat("MasterVol", Mathf.Log10(masterlvl) * 20f);
         PlayerPrefs.SetFloat("MasterVol", masterlvl);
-        PlayerPrefs.Save();
     }
 
     public void SetSFXLvl(float sfxlvl)
     {
-        masterMixer.SetFloat("SFXVol", Mathf.Log10(sfxlvl) * 20);
+        masterMixer.SetFloat("SFXVol", Mathf.Log10(sfxlvl) * 20f);
         PlayerPrefs.SetFloat("SFXVol", sfxlvl);
-        PlayerPrefs.Save();
     }
 
     public void SetMusicLvl(float musiclvl)
     {
-        masterMixer.SetFloat("MusicVol", Mathf.Log10(musiclvl) * 20);
+        masterMixer.SetFloat("MusicVol", Mathf.Log10(musiclvl) * 20f);
         PlayerPrefs.SetFloat("MusicVol", musiclvl);
-        PlayerPrefs.Save();
     }
 }

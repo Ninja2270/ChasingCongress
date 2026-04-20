@@ -4668,7 +4668,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: New Conversation 18
+  conversation: Runner
   conversationConversant: {fileID: 0}
   conversationActor: {fileID: 0}
   startConversationEntryID: -1
@@ -4869,7 +4869,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: New Conversation 3
+  conversation: 10
   conversationConversant: {fileID: 640978452}
   conversationActor: {fileID: 1085933531}
   startConversationEntryID: -1
@@ -8176,7 +8176,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: New Conversation 11
+  conversation: 6
   conversationConversant: {fileID: 1129111495}
   conversationActor: {fileID: 1085933531}
   startConversationEntryID: -1
@@ -8784,7 +8784,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: New Conversation 10
+  conversation: 5
   conversationConversant: {fileID: 1202499566}
   conversationActor: {fileID: 1085933531}
   startConversationEntryID: -1
@@ -8982,7 +8982,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 410, y: 273}
+  m_AnchoredPosition: {x: 74, y: 273}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1208071440
@@ -10364,7 +10364,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: New Conversation 1
+  conversation: 4
   conversationConversant: {fileID: 1492011381}
   conversationActor: {fileID: 1085933531}
   startConversationEntryID: -1
@@ -10714,7 +10714,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: New Conversation 9
+  conversation: 9
   conversationConversant: {fileID: 1512408392}
   conversationActor: {fileID: 1085933531}
   startConversationEntryID: -1
@@ -11232,7 +11232,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: New Conversation 8
+  conversation: 3
   conversationConversant: {fileID: 1618833490}
   conversationActor: {fileID: 1085933531}
   startConversationEntryID: -1
@@ -11932,7 +11932,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: New Conversation 5
+  conversation: 2
   conversationConversant: {fileID: 1656475318}
   conversationActor: {fileID: 1085933531}
   startConversationEntryID: -1
@@ -13108,7 +13108,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: New Conversation 7
+  conversation: 8
   conversationConversant: {fileID: 1717039513}
   conversationActor: {fileID: 1085933531}
   startConversationEntryID: -1
@@ -24398,7 +24398,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: New Conversation 1
+  conversation: 7
   conversationConversant: {fileID: 1839409996}
   conversationActor: {fileID: 1085933531}
   startConversationEntryID: -1
@@ -25854,7 +25854,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: New Conversation 4
+  conversation: 11
   conversationConversant: {fileID: 2018826876}
   conversationActor: {fileID: 1085933531}
   startConversationEntryID: -1

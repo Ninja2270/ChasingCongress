@@ -4,52 +4,55 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI timerText;
-    [SerializeField] float remainingTime;
-    [SerializeField] bool timeIsRunning = true;
-
-    // Update is called once per frame
-    private void Awake()
-    {
-        ResetTimer();
-        timeIsRunning = true;
-        timerText.color = Color.white;
-    }
+    SceneLoader loader;
+    public float newTime = 10f;
+    public float timeRemaining = 10f; // Timer duration in seconds
+    public bool timerIsRunning = false; // Flag to turn timer on/off
+    public TextMeshProUGUI timerText; // UI Text to display timer
     void Update()
     {
-        if(timeIsRunning && remainingTime > 0)
+        if (timerIsRunning)
         {
-            remainingTime -= Time.deltaTime;
-            
+            if (timeRemaining > 0)
+            {
+                timeRemaining -= Time.deltaTime;
+                DisplayTime(timeRemaining);
+            }
+            else
+            {
+                timeRemaining = 0;
+                timerIsRunning = false;
+                Debug.Log("Timer has ended!");
+                SceneManager.LoadScene(0);
+                Destroy(gameObject);
+
+            }
         }
-        else if (remainingTime < 0)
+        if (!timerIsRunning)
         {
-            remainingTime = 0;
-            timerText.color = Color.red;
-           
-           
-           
-        }
-        if(remainingTime == 0)
-        {
-          
-            
-            timeIsRunning = false;
-            
-            SceneManager.LoadSceneAsync("TitleScreen");
             ResetTimer();
+            StartTimer();
         }
-        
-
-
-          
-        int minutes = Mathf.FloorToInt(remainingTime / 60);
-        int seconds = Mathf.FloorToInt(remainingTime % 60);
+    }
+    void DisplayTime(float timeToDisplay)
+    {
+        float minutes = Mathf.FloorToInt(timeToDisplay / 60);
+        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
-    void ResetTimer()
+    public void StartTimer()
     {
-        remainingTime = 10;
-        timeIsRunning = false;
+        timerIsRunning = true;
+    }
+    public void StopTimer()
+    {
+        timerIsRunning = false;
+    }
+    public void ResetTimer()
+    {
+        timeRemaining = 10f;
+        timerIsRunning = false;
+        DisplayTime(timeRemaining);
     }
 }
+
